@@ -1,0 +1,109 @@
+{
+  "profile": "ADM",
+  "headerMenu": [
+    {
+      "label": "Trade Monitoring",
+      "value": "tradeMonitoring",
+      "submenu": [
+        {
+          "label": "ETD Activity",
+          "value": "etdActivity"
+        },
+        {
+          "label": "Equities Activity",
+          "value": "equitiesActivity"
+        },
+        {
+          "label": "Forex Activity",
+          "value": "forexActivity"
+        },
+        {
+          "label": "OTC Activity",
+          "value": "otcActivity"
+        },
+        {
+          "label": "Customer Activities",
+          "value": "customerActivities"
+        }
+      ]
+    },
+    {
+      "label": "ACT40",
+      "value": "act40",
+      "submenu": [
+        {
+          "label": "Intraday position",
+          "value": "intradayPosition"
+        },
+        {
+          "label": "Breaks",
+          "value": "breaks"
+        },
+        {
+          "label": "Spot Date",
+          "value": "spotDate"
+        },
+        {
+          "label": "EOD Position",
+          "value": "eodPosition"
+        }
+      ]
+    },
+    {
+      "label": "Analysis and Report",
+      "value": "analysisAndReport",
+      "submenu": [
+        {
+          "label": "Trades volumes",
+          "value": "tradesVolumes"
+        },
+        {
+          "label": "Global volumes",
+          "value": "globalVolumes"
+        }
+      ]
+    },
+    {
+      "label": "Administration",
+      "value": "administration"
+    }
+  ],
+  "admMenu": [{
+    "label": "Administration",
+    "value": "administration",
+    "submenu": [
+      {
+        "label": "Users rights",
+        "value": "usersRights",
+        "submenu": [
+          {
+            "label": "Environments",
+            "value": "environments"
+          },
+          {
+            "label": "Environments rules",
+            "value": "environmentsRules"
+          },
+          {
+            "label": "Authorizations",
+            "value": "authorizations",
+            "submenu": [
+              {
+                "label": "Create account",
+                "value": "createAccount"
+              },
+              {
+                "label": "Delete account",
+                "value": "deleteAccount"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "label": "Cache",
+        "value": "cache"
+      }
+    ]
+  }]
+}

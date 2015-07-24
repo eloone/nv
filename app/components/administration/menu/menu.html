@@ -1,0 +1,13 @@
+<ul>
+	<li ui-sref-active="active" ng-repeat="menuItem in menu">
+		<a ng-if="menuItem.items" data-toggle="collapse" data-target="#items-{{menuItem.id}}" href="#" class="nv-collapsible collapsed">
+			<span ng-show="menuItem.items" class="nv-collapse-btn">
+				<i class="fa fa-angle-left"></i>
+				<i class="fa fa-angle-down"></i>
+			</span>
+			{{menuItem.label}}
+		</a>
+		<a  ng-if="!menuItem.items" ui-sref="{{menuItem.state}}">{{menuItem.label}}</a>
+		<nv-adm-menu class="collapse items level-{{menuItem.level}}" id="items-{{menuItem.id}}" menu="menuItem.items"></nv-adm-menu>
+	</li>
+</ul>

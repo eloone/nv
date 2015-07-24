@@ -1,0 +1,40 @@
+{
+  "admMenu": [{
+    "label": "Administration",
+    "value": "administration",
+    "items": [
+      {
+        "label": "Users rights",
+        "value": "usersRights",
+        "items": [
+          {
+            "label": "Environments",
+            "value": "environments"
+          },
+          {
+            "label": "Environments rules",
+            "value": "environmentsRules"
+          },
+          {
+            "label": "Authorizations",
+            "value": "authorizations",
+            "items": [
+              {
+                "label": "Create account",
+                "value": "createAccount"
+              },
+              {
+                "label": "Delete account",
+                "value": "deleteAccount"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "label": "Cache",
+        "value": "cache"
+      }
+    ]
+  }]
+}

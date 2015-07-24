@@ -1,0 +1,70 @@
+{
+  "headerMenu": [
+    {
+      "label": "Trade Monitoring",
+      "value": "tradeMonitoring",
+      "items": [
+        {
+          "label": "ETD Activity",
+          "value": "etdActivity"
+        },
+        {
+          "label": "Equities Activity",
+          "value": "equitiesActivity"
+        },
+        {
+          "label": "Forex Activity",
+          "value": "forexActivity"
+        },
+        {
+          "label": "OTC Activity",
+          "value": "otcActivity"
+        },
+        {
+          "label": "Customer Activities",
+          "value": "customerActivities"
+        }
+      ]
+    },
+    {
+      "label": "ACT40",
+      "value": "act40",
+      "items": [
+        {
+          "label": "Intraday position",
+          "value": "intradayPosition"
+        },
+        {
+          "label": "Breaks",
+          "value": "breaks"
+        },
+        {
+          "label": "Spot Date",
+          "value": "spotDate"
+        },
+        {
+          "label": "EOD Position",
+          "value": "eodPosition"
+        }
+      ]
+    },
+    {
+      "label": "Analysis and Report",
+      "value": "analysisAndReport",
+      "items": [
+        {
+          "label": "Trades volumes",
+          "value": "tradesVolumes"
+        },
+        {
+          "label": "Global volumes",
+          "value": "globalVolumes"
+        }
+      ]
+    },
+    {
+      "label": "Administration",
+      "value": "administration"
+    }
+  ]
+}

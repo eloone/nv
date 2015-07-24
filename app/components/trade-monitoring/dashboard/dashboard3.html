@@ -1,0 +1,47 @@
+<ui-view class="nv-page-dashboard" ng-controller="TradeMonitoringDashboardCtrl">
+	<div class="nv-title-bar">
+		<div class="nv-title-icon">
+			<i class="fa fa-heartbeat"></i>
+		</div>
+		<div>
+			<h2>{{trade.label}}</h2>
+			<ol class="breadcrumb no-background">
+				<li>
+					<a ui-sref="#">Trade Lifecycle</a>
+				</li>
+				<li class="active">
+					<strong>{{trade.label}}</strong>
+				</li>
+			</ol>
+		</div>
+  	</div>
+  	<section>
+	  	<div class="nv-table nv-trades-activity container-fluid">
+	  		<div class="nv-columns-titles nv-table-row row">
+	  			<div class="nv-metrics-name col-md-6 nv-cell"></div>
+				<div class="nv-table-column col-md-1 nv-cell">Success</div>
+				<div class="nv-table-column col-md-1 nv-cell">Pending</div>
+				<div class="nv-table-column col-md-1 nv-cell">Fails</div>
+				<div class="nv-table-column col-md-1 nv-cell">Success %</div>
+				<div class="nv-table-column col-md-1 nv-cell">Pending %</div>
+				<div class="nv-table-column col-md-1 nv-cell">Fails %</div>
+	  		</div>
+	  		<div nv-scrollable-table class="nv-trades-metrics">
+	  			<div ng-init="showSecondLevel=false" ng-repeat="firstLevel in metrics" ng-class="{active: showSecondLevel}" class="nv-region-row">
+					<nv-metrics-row class="nv-table" metrics="firstLevel" show="showSecondLevel"></nv-metrics-row>
+					<div ng-if="showSecondLevel" class="nv-markets-group">
+		  				<div ng-init="showThirdLevel=false" ng-repeat="secondLevel in firstLevel.items" class="nv-market-row">
+							<nv-metrics-row class="nv-table" show="showThirdLevel" metrics="secondLevel"></nv-metrics-row>
+							<div ng-if="showThirdLevel" class="nv-trade-flow-types-group">
+			  					<div ng-repeat="thirdLevel in secondLevel.items" class="nv-trade-flow-type-row">
+			  						<i class="nv-bullet-point fa fa-circle"></i>
+									<nv-metrics-row class="nv-table" metrics="thirdLevel"></nv-metrics-row>
+			  					</div>
+		  					</div>
+		  				</div>
+	  				</div>
+	  			</div>
+	  		</div>
+	  	</div>
+  	</section>
+</ui-view>

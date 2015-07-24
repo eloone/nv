@@ -1,0 +1,13 @@
+@import 'variables';
+@import 'menu';
+
+.nv-page-administration {
+	
+	&.row {
+		margin: 0;
+	}
+
+	.nv-adm-panel-content {
+		margin-left: $admMenuWidth;
+	}
+}

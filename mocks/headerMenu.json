@@ -1,0 +1,55 @@
+{
+  "data": [
+    {
+      "label": "Trade Monitoring",
+      "items": [
+        {
+          "label": "ETD Activity"
+        },
+        {
+          "label": "Equities Activity"
+        },
+        {
+          "label": "Forex Activity"
+        },
+        {
+          "label": "OTC Activity"
+        },
+        {
+          "label": "Customer Activities"
+        }
+      ]
+    },
+    {
+      "label": "ACT40",
+      "items": [
+        {
+          "label": "Intraday position"
+        },
+        {
+          "label": "Breaks"
+        },
+        {
+          "label": "Spot Date"
+        },
+        {
+          "label": "EOD Position"
+        }
+      ]
+    },
+    {
+      "label": "Analysis and Report",
+      "items": [
+        {
+          "label": "Trades volumes"
+        },
+        {
+          "label": "Global volumes"
+        }
+      ]
+    },
+    {
+      "label": "Administration"
+    }
+  ]
+}

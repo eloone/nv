@@ -1,0 +1,296 @@
+/* Sg color palette */
+/* Primary */
+/* Secondary */
+.nv-page-administration .nv-adm-menu {
+  background: #333333;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 240px;
+  margin-bottom: 0;
+  list-style-type: none;
+  padding: 0; }
+  .nv-page-administration .nv-adm-menu .nv-collapsible .nv-collapse-btn .fa-angle-down {
+    display: inline; }
+  .nv-page-administration .nv-adm-menu .nv-collapsible .nv-collapse-btn .fa-angle-left {
+    display: none; }
+  .nv-page-administration .nv-adm-menu .nv-collapsible.collapsed .nv-collapse-btn .fa-angle-down {
+    display: none; }
+  .nv-page-administration .nv-adm-menu .nv-collapsible.collapsed .nv-collapse-btn .fa-angle-left {
+    display: inline; }
+  .nv-page-administration .nv-adm-menu .nv-collapse-btn {
+    float: right;
+    cursor: pointer;
+    margin-right: 10px; }
+  .nv-page-administration .nv-adm-menu li {
+    list-style-type: none; }
+    .nv-page-administration .nv-adm-menu li a {
+      padding: 5px; }
+      .nv-page-administration .nv-adm-menu li a:hover {
+        background: #262626; }
+    .nv-page-administration .nv-adm-menu li.active a {
+      background: #6f6f6f; }
+  .nv-page-administration .nv-adm-menu > li > a {
+    padding: 10px; }
+  .nv-page-administration .nv-adm-menu ul {
+    padding: 0; }
+  .nv-page-administration .nv-adm-menu a, .nv-page-administration .nv-adm-menu .nv-collapse-btn {
+    color: #BDBDBD;
+    font-weight: bold;
+    display: block; }
+  .nv-page-administration .nv-adm-menu .items.level-2 a {
+    padding-left: 30px; }
+  .nv-page-administration .nv-adm-menu .items.level-3 a {
+    padding-left: 45px; }
+
+.nv-page-administration.row {
+  margin: 0; }
+
+.nv-page-administration .nv-adm-panel-content {
+  margin-left: 240px; }
+
+/*Variables*/
+.nv-page-dashboard {
+  /* !-- Dashboard header */
+  /* Dashboard header -- */ }
+  .nv-page-dashboard .nv-title-bar {
+    width: 100%;
+    padding: 10px 0px 0px 10px;
+    background-color: #FFFFFF;
+    border-top: 0px solid #EAEAEB;
+    border-right: 0px solid #EAEAEB;
+    border-bottom: 1px solid #EAEAEB;
+    border-left: 0px solid #EAEAEB;
+    margin-top: 0px;
+    margin-bottom: 10px; }
+    .nv-page-dashboard .nv-title-bar i {
+      display: inline-block;
+      font-size: 43px;
+      margin: 0 50 7px;
+      padding: 0px;
+      text-overflow: ellipsis;
+      float: left; }
+    .nv-page-dashboard .nv-title-bar div ol {
+      margin-bottom: 5px !important;
+      padding-top: 0px !important; }
+    .nv-page-dashboard .nv-title-bar h2 {
+      margin-top: 0;
+      margin-bottom: 0px !important; }
+  .nv-page-dashboard .nv-title-icon {
+    margin-right: 10px;
+    display: inline-block;
+    float: left;
+    margin-top: 0;
+    position: relative;
+    padding: 0; }
+
+.nv-table {
+  display: table;
+  width: 100%; }
+  .nv-table .nv-table-row {
+    margin-right: 0;
+    margin-left: 0;
+    padding-left: 0;
+    display: table-row; }
+    .nv-table .nv-table-row .nv-cell {
+      display: table-cell;
+      padding: 5px;
+      padding-left: 10px;
+      padding-right: 10px; }
+    .nv-table .nv-table-row:hover:not(.nv-columns-titles) {
+      background: #ffd6b0; }
+
+.nv-trades-activity {
+  box-shadow: 0px 3px 5px #ddd;
+  width: 100%;
+  background: white;
+  /* ! Region level */
+  /* Region level -- */
+  /* ! Market level */
+  /* Market level -- */
+  /* ! Flow type level */
+  /* Flow type level -- */ }
+  .nv-trades-activity.container-fluid {
+    padding: 0;
+    padding-bottom: 5px; }
+  .nv-trades-activity .nv-columns-titles {
+    font-weight: bold;
+    text-align: center;
+    color: white;
+    background-image: -webkit-linear-gradient(top, #8C8C8C 0%, #2f333e 100%);
+    background-image: -o-linear-gradient(top, #8C8C8C 0%, #2f333e 100%);
+    background-image: linear-gradient(to bottom, #8C8C8C 0%, #2f333e 100%);
+    background-repeat: repeat-x;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FF8C8C8C', endColorstr='#FF2F333E', GradientType=0); }
+  .nv-trades-activity .nv-table-row {
+    width: 100%;
+    display: flex;
+    flex-direction: row; }
+  .nv-trades-activity .nv-metrics-name {
+    width: 20%;
+    min-width: 110px;
+    flex-grow: 6; }
+  .nv-trades-activity .nv-table-column {
+    width: 13,3%;
+    flex-grow: 1;
+    min-width: 141px; }
+  .nv-trades-activity .nv-region-row {
+    padding: 0;
+    font-size: 18px;
+    background: #F7F7F7;
+    border-radius: 3px;
+    margin: 5px;
+    box-shadow: 1px 1px 3px #ddd; }
+    .nv-trades-activity .nv-region-row .progress {
+      width: 60px; }
+    .nv-trades-activity .nv-region-row.active {
+      padding-bottom: 1px; }
+  .nv-trades-activity .nv-markets-group {
+    margin: 10px 0;
+    margin-left: 15px; }
+    .nv-trades-activity .nv-markets-group .nv-cell {
+      padding-right: 5px;
+      padding-left: 15px; }
+  .nv-trades-activity .nv-market-row {
+    font-size: 16px;
+    background: #FFFFFF;
+    border: 1px solid #FFFFFF;
+    border-radius: 3px;
+    margin: 5px;
+    box-shadow: 1px 1px 3px #ddd; }
+    .nv-trades-activity .nv-market-row .nv-cell:first-child {
+      padding-left: 10px; }
+  .nv-trades-activity .nv-trade-flow-types-group {
+    background: #F7F7F7;
+    margin: 5px 0;
+    margin-left: 15px;
+    margin-right: 5px;
+    border-radius: 3px;
+    padding-top: 5px;
+    padding-bottom: 5px; }
+    .nv-trades-activity .nv-trade-flow-types-group .nv-cell {
+      padding-right: 0px;
+      padding-left: 20px; }
+  .nv-trades-activity .nv-trade-flow-type-row {
+    font-size: 14px;
+    position: relative; }
+    .nv-trades-activity .nv-trade-flow-type-row .nv-cell:first-child {
+      padding-left: 20px; }
+    .nv-trades-activity .nv-trade-flow-type-row .nv-cell {
+      padding-top: 0;
+      padding-bottom: 0; }
+    .nv-trades-activity .nv-trade-flow-type-row .nv-bullet-point {
+      font-size: 5px;
+      position: absolute;
+      top: 45%;
+      left: 11px; }
+  .nv-trades-activity .success-percent {
+    color: #35BD94; }
+  .nv-trades-activity .pending-percent {
+    color: #F5AE3E; }
+  .nv-trades-activity .failure-percent {
+    color: #EA0631; }
+  .nv-trades-activity .nv-figure {
+    text-align: right; }
+    .nv-trades-activity .nv-figure.nv-figure-percent {
+      text-align: left; }
+  .nv-trades-activity .nv-collapse-btn {
+    cursor: pointer;
+    color: #BBBBBB;
+    margin-right: 7px;
+    float: left;
+    margin-top: 1px; }
+    .nv-trades-activity .nv-collapse-btn:hover {
+      color: #898888; }
+  .nv-trades-activity .progress-bar-success {
+    background: #35BD94; }
+  .nv-trades-activity .progress-bar-warning {
+    background: #F5AE3E; }
+  .nv-trades-activity .progress-bar-danger {
+    background: #EA0631; }
+  .nv-trades-activity .progress {
+    width: 70px;
+    float: left;
+    margin-right: 5px; }
+  .nv-trades-activity .progress-small,
+  .nv-trades-activity .progress-mini {
+    margin-top: 10px; }
+  .nv-trades-activity .progress-big,
+  .nv-trades-activity .progress-big .progress-bar {
+    height: 10px;
+    margin-bottom: 0px; }
+  .nv-trades-activity .progress-medium,
+  .nv-trades-activity .progress-medium .progress-bar {
+    height: 7px;
+    margin-bottom: 0px; }
+  .nv-trades-activity .progress-mini,
+  .nv-trades-activity .progress-mini .progress-bar {
+    height: 5px;
+    margin-bottom: 0px; }
+
+.nv-page-login h2 {
+  margin-top: 0px;
+  margin-bottom: 20px; }
+
+.nv-page-login .row {
+  width: 600px;
+  margin: 25vh auto; }
+
+.nv-page-login button[type="submit"] {
+  width: 100%; }
+
+.nv-page-login .nv-login-desc {
+  padding-top: 15px; }
+
+.nv-page-login .nv-login-box {
+  background: white;
+  padding: 23px;
+  padding-bottom: 20px;
+  width: 244px; }
+
+.nv-page-login form {
+  margin: 0 auto;
+  text-align: center; }
+
+.nv-page-login .nvision-logo {
+  margin-bottom: 20px; }
+
+.nv-page-login .sg-logo {
+  margin-top: 10px; }
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%; }
+
+body {
+  background: #f5f5f5; }
+
+section {
+  background-color: #f3f3f4;
+  margin: 10px; }
+
+.nv-container {
+  min-height: 100vh;
+  position: relative; }
+
+.nv-app {
+  padding-bottom: 40px;
+  min-height: 100vh; }
+
+.nv-footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 40px;
+  background: white;
+  padding: 15px;
+  line-height: 10px;
+  border-top: 1px solid #e7eaec;
+  color: #777777; }
+
+.nv-page-content {
+  min-height: 86.6vh;
+  position: relative; }

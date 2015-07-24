@@ -1,0 +1,32 @@
+{
+  "data": [{
+    "label": "Administration",
+    "items": [
+      {
+        "label": "Users rights",
+        "items": [
+          {
+            "label": "Environments"
+          },
+          {
+            "label": "Environments rules"
+          },
+          {
+            "label": "Authorizations",
+            "items": [
+              {
+                "label": "Create account"
+              },
+              {
+                "label": "Delete account"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "label": "Cache"
+      }
+    ]
+  }]
+}

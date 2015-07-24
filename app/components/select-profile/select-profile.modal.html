@@ -1,0 +1,11 @@
+<div class="modal-header">
+    <h4 class="modal-title">Select your profile</h4>
+</div>
+<div class="modal-body">
+    <ul>
+        <li ng-repeat="profile in profiles">
+            <button class="btn" ng-click="selectProfile(profile.id)">{{profile.label}}</button>
+        </li>
+    </ul>
+</div>
+

@@ -1,0 +1,168 @@
+<ui-view class="nv-page-dashboard" ng-controller="TradeMonitoringDashboardCtrl">
+	<div class="nvtitle-bar">
+		<div class="nvtitle-icon">
+			<i class="fa fa-heartbeat"></i>
+		</div>
+		<div>
+			<h2>{{trade.label}}</h2>
+			<ol class="breadcrumb no-background">
+				<li>
+					<a ui-sref="#">Trade Lifecycle</a>
+				</li>
+				<li class="active">
+					<strong>{{trade.label}}</strong>
+				</li>
+			</ol>
+		</div>
+  	</div>
+
+  	<section>
+  		<div class="row ng-scope">
+  			<div class="col-lg-12 ng-scope" data-ng-repeat="region in trades">
+  				<div class="dashboardPrimaryPanel float-e-margins" >
+									
+					<span class="nvcollapse-btn" ng-click="display.markets = !display.markets">
+						<i ng-if="!display.markets && region.items.length" class="fa fa-angle-right"></i>
+						<i ng-if="display.markets" class="fa fa-angle-down"></i>
+						{{region.name}}
+					</span>
+
+					<div class="nvpanel-metrics row col-lg-5">
+						<div class="col-md-4 metrics-success">
+							<p class="metrics-category">Success</p>
+							<span class="trade-figure success">{{region.success}}</span>
+						</div>
+						<div class="col-md-4 metrics-pending">
+							<p class="metrics-category">Pending</p>
+							<span class="trade-figure">{{region.inprogress}}</span>
+						</div>
+						<div class="col-md-4 metrics-fails">
+							<p class="metrics-category">Fails</p>
+							<span class="trade-figure">{{region.failure}}</span>
+						</div>
+					</div>
+				</div>
+  			</div>
+  		</div>
+	  	<!--<div class="row ng-scope">
+			<div class="col-lg-12 ng-scope">
+				<div class="dashboard-panel">
+					<div class="nvpanel-title">
+						<h5 class="ng-binding">TOTO</h5>					
+						<div class="nvpanel-tools">
+							<span ng-click="display.markets = !display.markets" class="nvcollapse-btn">
+								<i ng-if="!showMarkets" class="fa fa-chevron-up"></i>
+								<i ng-if="showMarkets" class="fa fa-chevron-down"></i>
+							</span>
+						</div>
+					</div>
+					<div >
+						<table class="table dashboard-table dashboard-striped">
+							<thead>
+								<tr>
+									<th class="header-1"></th>
+									<th class="plain-metrics">Success</th>
+									<th class="plain-metrics">Pending</th>
+									<th class="plain-metrics fails-columns">Fails</th>
+									<th>Success %</th>
+									<th>Pending %</th>
+									<th>Fails %</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr class="dashboard-row-activity" ng-repeat-start="region in trades">
+									<td>
+							        	<span class="nvcollapse-btn" ng-click="display.markets = !display.markets">
+											<i ng-if="!display.markets && region.items.length" class="fa fa-angle-right"></i>
+											<i ng-if="display.markets" class="fa fa-angle-down"></i>
+										
+										{{region.name}}
+										</span>
+									</td>
+							        <td class="success">{{region.success}}</td>
+							        <td class="pending">{{region.inprogress}}</td>
+							        <td class="danger fails-columns">{{region.failure}}</td>
+							        <td class="success percent">
+						        		<div class="dashboard-progress progress-big">
+											<div style="width: {{region.perc_success}}%" class="progress-bar progress-bar-success"></div>
+										</div>
+										{{region.perc_success}}%
+									</td>
+							        <td class="pending percent">
+						        		<div class="dashboard-progress progress-big">
+											<div style="width: {{region.perc_inprogress}}%" class="progress-bar progress-bar-warning"></div>
+										</div>
+										{{region.perc_inprogress}}%
+									</td>
+							        <td class="danger percent">
+						        		<div class="dashboard-progress progress-big">
+											<div style="width: {{region.perc_failure}}%" class="progress-bar progress-bar-danger"></div>
+										</div>
+										{{region.perc_failure}}%
+									</td>
+								</tr>
+
+								<tr class="dashboard-row-market" ng-if="display.markets" ng-repeat-start="market in region.items">
+									<td>
+							        	<span class="nvcollapse-btn" ng-click="market.displayTypes = !market.displayTypes">
+											<i ng-if="!market.displayTypes && market.items.length" class="fa fa-angle-right"></i>
+											<i ng-if="!market.displayTypes && !market.items.length" class="nvbullet-point fa fa-circle"/>
+											<i ng-if="market.displayTypes"  class="fa fa-angle-down"></i>
+										</span>
+										{{market.name}}
+									</td>
+							        <td class="plain-metrics">{{market.success}}</td>
+							        <td class="plain-metrics">{{market.inprogress}}</td>
+							        <td class="plain-metrics fails-columns">{{market.failure}}</td>
+							        <td class="success percent">
+						        		<div class="dashboard-progress progress-medium">
+											<div style="width: {{market.perc_success}}%" class="progress-bar progress-bar-success"></div>
+										</div>
+										{{market.perc_success}}%
+									</td>
+							        <td class="pending percent">
+						        		<div class="dashboard-progress progress-medium">
+											<div style="width: {{market.perc_inprogress}}%" class="progress-bar progress-bar-warning"></div>
+										</div>
+										{{market.perc_inprogress}}%
+									</td>
+							        <td class="danger percent">
+						        		<div class="dashboard-progress progress-medium">
+											<div style="width: {{market.perc_failure}}%" class="progress-bar progress-bar-danger"></div>
+										</div>
+										{{market.perc_failure}}%
+									</td>
+								</tr>
+								<tr class="dashboard-row-trade-type" ng-if="market.displayTypes" ng-repeat="type in market.items" ng-repeat-end >
+									<td><i class="nvbullet-point fa fa-circle"></i>{{type.name}}</td>
+							        <td class="plain-metrics">{{type.success}}</td>
+							        <td class="plain-metrics">{{type.inprogress}}</td>
+							        <td class="plain-metrics fails-columns">{{type.failure}}</td>
+							        <td class="success percent">
+						        		<div class="dashboard-progress progress-mini">
+											<div style="width: {{type.perc_success}}%" class="progress-bar progress-bar-success"></div>
+										</div>
+										{{type.perc_success}}%
+									</td>
+							        <td class="pending percent">
+						        		<div class="dashboard-progress progress-mini">
+											<div style="width: {{type.perc_inprogress}}%" class="progress-bar progress-bar-warning"></div>
+										</div>
+										{{type.perc_inprogress}}%
+									</td>
+							        <td class="danger percent">
+						        		<div class="dashboard-progress progress-mini">
+											<div style="width: {{type.perc_failure}}%" class="progress-bar progress-bar-danger"></div>
+										</div>
+										{{type.perc_failure}}%
+									</td>
+								</tr>
+								<tr ng-repeat-end></tr>
+							</tbody>		
+						</table>
+					</div>
+		  		</div>
+		  	</div>
+		</div>-->
+	</section>
+</ui-view>

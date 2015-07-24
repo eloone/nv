@@ -1,0 +1,5 @@
+{
+	"apiEndpoint": "mocks",
+	"appName": "nvision-front",
+	"rootState": "root"
+}

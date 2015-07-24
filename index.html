@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <base href="/nvision-front/">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <title>NVision</title>
+
+	<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,200,200italic,300,300italic,400italic,600,600italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="./assets/css/sg-bootstrap.css" >
+  <link rel="stylesheet" href="./assets/css/nvision.css">
+	<link rel="stylesheet" href="./assets/fonts/font-awesome/css/font-awesome.css">
+  <script src="http://localhost:35729/livereload.js"></script>
+  <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+
+<div class="nv-container">
+    <div ng-if="!user.logged" ui-view class="nv-app"></div>
+    <nvision-login-box ng-if="user.logged"></nvision-login-box>
+    <nv-footer></nv-footer>
+</div>
+
+<!-- Libraries -->
+<script type="text/javascript" src="./bower_components/object-path/index.js"></script>
+<script type="text/javascript" src="./bower_components/lodash/lodash.min.js"></script>
+<script type="text/javascript" src="./bower_components/jquery/dist/jquery.min.js"></script>
+<script type="text/javascript" src="./bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="./bower_components/angular/angular.min.js"></script>
+<script type="text/javascript" src="./bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
+<script type="text/javascript" src="./bower_components/angular-resource/angular-resource.min.js"></script>
+<script type="text/javascript" src="./bower_components/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
+
+<!-- App -->
+<script type="text/javascript" src="./app/main/config/config.service.js"></script>
+<script type="text/javascript" src="./app/lib/menu-formatter/menu-formatter.js"></script>
+<script type="text/javascript" src="./app/lib/http-error-handler/http-error-handler.js"></script>
+<script type="text/javascript" src="./app/lib/recursion-helper/recursion-helper.js"></script>
+<script type="text/javascript" src="./app/lib/utils/lodash.service.js"></script>
+<script type="text/javascript" src="./app/lib/utils/utils.js"></script>
+<script type="text/javascript" src="./app/lib/user/user.service.js"></script>
+<script type="text/javascript" src="./app/lib/lib.js"></script>
+<script type="text/javascript" src="./app/components/trade-monitoring/routes.js"></script>
+<script type="text/javascript" src="./app/components/administration/menu/lib/menu-formatter.service.js"></script>
+<script type="text/javascript" src="./app/components/administration/menu/lib/menu.service.js"></script>
+<script type="text/javascript" src="./app/components/administration/menu/menu.directive.js"></script>
+<script type="text/javascript" src="./app/components/administration/administration.js"></script>
+<script type="text/javascript" src="./app/components/administration/routes.js"></script>
+<script type="text/javascript" src="./app/components/analysis-and-report/routes.js"></script>
+<script type="text/javascript" src="./app/components/act-40/routes.js"></script>
+
+<script type="text/javascript" src="./app/components/select-profile/select-profile.directive.js"></script>
+<script type="text/javascript" src="./app/components/select-profile/profiles.service.js"></script>
+<script type="text/javascript" src="./app/components/select-profile/select-profile.controller.js"></script>
+<script type="text/javascript" src="./app/main/routes.js"></script>
+<script type="text/javascript" src="./app/main/header/menu/lib/menu.service.js"></script>
+<script type="text/javascript" src="./app/main/header/menu/menu.directive.js"></script>
+<script type="text/javascript" src="./app/main/header/header.directive.js"></script>
+<script type="text/javascript" src="./app/main/footer/footer.directive.js"></script>
+<script type="text/javascript" src="./app/main/login/login.service.js"></script>
+<script type="text/javascript" src="./app/main/login/login.controller.js"></script>
+<script type="text/javascript" src="./app/main/login/login-box.directive.js"></script>
+<script type="text/javascript" src="./app/main/login/login.js"></script>
+<script type="text/javascript" src="./app/main/main.js"></script>
+<script type="text/javascript" src="./app/components/administration/administration.js"></script>
+<script type="text/javascript" src="./app/components/trade-monitoring/lib/trade-activity.service.js"></script>
+<script type="text/javascript" src="./app/components/trade-monitoring/dashboard/metrics-row/metrics-row.directive.js"></script>
+<script type="text/javascript" src="./app/components/trade-monitoring/dashboard/scrollable-table/scrollable-table.directive.js"></script>
+<script type="text/javascript" src="./app/components/trade-monitoring/dashboard/metrics-row/collapse-button.directive.js"></script>
+<script type="text/javascript" src="./app/components/trade-monitoring/dashboard/dashboard.js"></script>
+<script type="text/javascript" src="./app/components/trade-monitoring/trade-monitoring.js"></script>
+<script type="text/javascript" src="./app/components/components.js"></script>
+<script type="text/javascript" src="./app/app.js"></script>
+<script type="text/javascript" src="./app/run.js"></script>
+</body>
+</html>

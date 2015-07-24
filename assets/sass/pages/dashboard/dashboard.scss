@@ -1,0 +1,277 @@
+@import 'variables';
+@import 'mixins';
+
+.nv-page-dashboard {
+
+/* !-- Dashboard header */
+	.nv-title-bar {
+		width:100%;
+		padding: 10px 0px 0px 10px;
+		background-color: #FFFFFF;
+		border-top: 0px solid #EAEAEB;
+		border-right: 0px solid #EAEAEB;
+		border-bottom: 1px solid #EAEAEB;
+		border-left: 0px solid #EAEAEB;
+		margin-top: 0px;
+		margin-bottom: 10px;
+
+		i {
+			display: inline-block;
+			font-size: 43px;
+			margin: 0 50 7px;
+			padding: 0px;
+			text-overflow: ellipsis;
+			float: left;
+		}
+
+		div ol {
+			margin-bottom: 5px !important;
+			padding-top: 0px !important;
+		}
+
+		h2 {
+			margin-top: 0;
+			margin-bottom: 0px !important;
+		}
+
+	}
+	
+	.nv-title-icon {
+		margin-right: 10px;
+		display: inline-block;
+		float: left;
+		margin-top: 0;
+		position: relative;
+		padding: 0;
+	}
+
+/* Dashboard header -- */
+
+}
+
+.nv-table {
+	display: table;
+	width: 100%;
+
+	.nv-table-row {
+		margin-right: 0;
+		margin-left: 0;
+		padding-left: 0;
+
+		display: table-row;
+
+		.nv-cell {
+			display: table-cell;
+			padding: 5px;
+			padding-left: $cellPaddingLeft;
+			padding-right: $cellPaddingRight;
+		}
+
+		&:hover {
+			&:not(.nv-columns-titles) {
+				background: $colorFocusZone;
+			}
+		}
+	}
+}
+
+.nv-trades-activity {
+	
+	&.container-fluid {
+		padding: 0;
+		padding-bottom: 5px;
+	}
+
+	box-shadow: 0px 3px 5px #ddd;
+
+	width: 100%;
+
+	background: white;
+
+	.nv-columns-titles {
+		font-weight: bold;
+		text-align: center;
+  		color: white;
+  		@include gradient-vertical(#8C8C8C, #2f333e);
+	}
+
+	.nv-table-row {
+		width: 100%;
+		display: flex;
+		flex-direction: row;
+	}
+
+	.nv-metrics-name {
+		width: 20%;
+		min-width: 110px;
+		flex-grow: 6;
+	}
+
+	.nv-table-column {
+		width: 13,3%;
+		flex-grow: 1;
+		min-width: 141px;
+		//border: 1px solid black;
+	}
+
+	/* ! Region level */
+	.nv-region-row {
+		padding: 0;
+		font-size: 18px;
+		background: $colorRegionBg;
+		@include panel-box;
+		box-shadow: 1px 1px 3px #ddd;
+
+		.progress {
+			width: 60px;
+		}
+
+		&.active {
+			//background: $colorFocusZone;
+			padding-bottom: 1px;
+		}
+	}
+
+	/* Region level -- */
+	/* ! Market level */
+	.nv-markets-group {
+		margin: 10px 0;
+		
+		margin-left: 3*$hiddenBoxMargin;
+
+		.nv-cell {
+			padding-right: $cellPaddingRight - $hiddenBoxMargin;
+			padding-left: $cellPaddingLeft + $hiddenBoxMargin;
+		}
+	}
+
+	.nv-market-row {
+		font-size: 16px;
+		background: $colorMarketBg;
+		border: 1px solid $colorMarketBg;
+		@include panel-box;
+		box-shadow: 1px 1px 3px #ddd;
+
+		.nv-cell:first-child {
+			padding-left: $cellPaddingLeft;
+		}
+
+		&:hover {
+			//border: 1px solid $colorFocusZone;
+		}
+	}
+
+	/* Market level -- */
+	/* ! Flow type level */
+	.nv-trade-flow-types-group {
+		
+		background: $colorFlowTypeBg;
+		margin: $hiddenBoxMargin 0;
+		margin-left: 3*$hiddenBoxMargin;
+		margin-right: $hiddenBoxMargin;
+		border-radius: 3px;
+		padding-top: 5px;
+		padding-bottom: 5px;
+
+		.nv-cell {
+			padding-right: $cellPaddingRight - 2*$hiddenBoxMargin;
+			padding-left: $cellPaddingLeft + 2*$hiddenBoxMargin;
+		}
+	}
+
+	.nv-trade-flow-type-row {
+		font-size: 14px;
+		position: relative;
+		.nv-cell:first-child {
+			padding-left: 2*$cellPaddingLeft;
+		}
+
+		.nv-cell {
+			padding-top: 0;
+			padding-bottom: 0;
+		}
+
+		.nv-bullet-point {
+			font-size: 5px;
+			position: absolute;
+			top: 45%;
+			left: 11px;
+		}
+
+	}
+
+	/* Flow type level -- */
+
+	.success-percent {
+		color: $colorSuccess;
+	}
+
+	.pending-percent {
+		color: $colorPending;
+	}
+
+	.failure-percent {
+		color: $colorFailure;
+	}
+
+	.nv-figure {
+		text-align: right;
+
+		&.nv-figure-percent {
+			text-align: left;
+		}
+	}
+
+	.nv-collapse-btn {
+		cursor: pointer;
+		color: $mediumGrey;
+		margin-right: 7px;
+		float: left;
+		margin-top: 1px;
+
+		&:hover {
+			color: $darkGrey;
+		}
+	}
+
+	.progress-bar-success {
+		background: $colorSuccess;
+	}
+
+	.progress-bar-warning {
+		background: $colorPending;
+	}
+
+	.progress-bar-danger {
+		background: $colorFailure;
+	}
+
+	.progress{
+	  width: 70px;
+	  float: left;
+	  margin-right: 5px;
+	}
+
+	.progress-small,
+	.progress-mini {
+	  margin-top: 10px;
+	}
+
+	.progress-big,
+	.progress-big .progress-bar {
+	  height: 10px;
+	  margin-bottom: 0px;
+	}
+
+	.progress-medium,
+	.progress-medium .progress-bar {
+	  height: 7px;
+	  margin-bottom: 0px;
+	}
+
+	.progress-mini,
+	.progress-mini .progress-bar {
+	  height: 5px;
+	  margin-bottom: 0px;
+	}
+}

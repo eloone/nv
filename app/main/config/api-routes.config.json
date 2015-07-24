@@ -1,0 +1,11 @@
+{
+	"admMenu": {
+		"getAdmMenu": "/admMenu.json"
+	},
+	"headerMenu": {
+		"getHeaderMenu": "/headerMenu.json"
+	},
+	"user": {
+		"getProfiles": "/profiles.json"
+	}
+}

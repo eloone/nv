@@ -1,0 +1,43 @@
+﻿<header class="topheader white-bg">
+    <nav class="topbar topbar-reverse" role="navigation">
+	  <div class="container">
+  		<ul class="nav topbar-nav">
+  		  <li><a href="#">Related website</a></li>
+  		  <li><a href="#">Related dddwebsite</a></li>
+  		</ul>
+
+  		<ul class="nav topbar-nav topbar-right">
+  		  <li class="dropdown">
+  			<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Navigate as <span class="caret"></span></a>
+  			<ul class="dropdown-menu" role="menu">
+  			  <li><a href="#">Item 1</a></li>
+  			  <li><a href="#">Item 2</a></li>
+  			</ul>
+  		  </li>
+  		</ul>
+	  </div>
+	</nav>
+    <nav class="navbar navbar-default" role="navigation">
+      <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <a class="navbar-brand square-brand" ui-sref="root.welcome"><img src="./assets/img/mini-brand.png" /></a>
+        </div>
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav">
+      			 <li ui-sref-active="active" ng-repeat="menuItem in headerMenu">
+      			  <a ng-if="!menuItem.items" ui-sref="root.{{menuItem.value}}" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">{{menuItem.label}}</a>
+              <a ng-if="menuItem.items" href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">{{menuItem.label}}</a>
+      			  <ul ng-if="menuItem.items" class="dropdown-menu dropdown-menu-middle dropdown-menu" role="menu">
+      				  <li ng-repeat="submenuItem in menuItem.items"><a ui-sref="root.{{menuItem.value}}.{{submenuItem.value}}"><span><i class="fa fa-university"></i></i></span>{{submenuItem.label}}</a></li>
+      			  </ul>
+      			</li>
+		      </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li class="nv-logo"><a class="navbar-sub-brand-mini" href="#"><img src="./assets/img/NVision_100.png" /></a>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>

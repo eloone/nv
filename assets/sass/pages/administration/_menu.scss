@@ -1,0 +1,89 @@
+.nv-page-administration {
+	.nv-adm-menu { 
+		background: $admMenuBg;	
+		position: absolute;
+		top: 0;
+		left: 0;
+		bottom: 0;
+		width: $admMenuWidth;
+		margin-bottom: 0;
+		list-style-type: none;
+		padding: 0;
+
+		.nv-collapsible {
+
+			.nv-collapse-btn .fa-angle-down {
+				display: inline;
+			}
+
+			.nv-collapse-btn .fa-angle-left {
+				display: none;
+			}
+
+			&.collapsed {
+				.nv-collapse-btn .fa-angle-down {
+					display: none;
+				}
+
+				.nv-collapse-btn .fa-angle-left {
+					display: inline;
+				}
+			}
+		}
+
+		.nv-collapse-btn {
+			float: right;
+			cursor: pointer;
+			margin-right: 10px;
+		}
+
+		li {
+
+			a {
+				padding: 5px;
+				&:hover {
+					background: darken($admMenuBg, 5);
+				}
+			}
+
+			&.active {
+				a {
+					background: $admMenuActive;
+				}
+			}
+
+			list-style-type: none;
+		}
+
+		>li {
+			>a {
+				padding: 10px;
+			}
+		}
+
+		ul {
+			padding: 0;
+		}
+
+		a, .nv-collapse-btn {
+			color: $admMenuLinks;
+			font-weight: bold;
+			display: block;
+		}
+
+		.items {
+			&.level-2 {
+				a {
+					padding-left: 2*$admMenuLevelPadding;
+				}
+			}
+
+			&.level-3 {
+				a {
+					padding-left: 3*$admMenuLevelPadding;
+				}
+			}
+		}
+
+	}
+}

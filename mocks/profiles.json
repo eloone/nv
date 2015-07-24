@@ -1,0 +1,28 @@
+{
+	"data": [
+		{
+			"label": "Profile 1",
+			"id": 1
+		},
+		{
+			"label": "Profile 2",
+			"id": 2
+		},
+		{
+			"label": "Profile 3",
+			"id": 3
+		},
+		{
+			"label": "Profile 4",
+			"id": 4
+		},
+		{
+			"label": "Profile 5",
+			"id": 5
+		},
+		{
+			"label": "Profile 6",
+			"id": 6
+		}
+	]
+}

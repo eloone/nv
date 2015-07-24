@@ -1,0 +1,27 @@
+<div class="nv-table-row row">
+	<div class="nv-metrics-name col-md-6 nv-cell">
+		<nv-collapse-button toggle="show" showable="metrics.items.length"></nv-collapse-button>
+		{{metrics.name}}
+	</div>
+	<div class="col-md-1 nv-table-column nv-figure nv-cell">{{metrics.success}}</div>
+	<div class="col-md-1 nv-table-column nv-figure nv-cell">{{metrics.inprogress}}</div>
+	<div class="col-md-1 nv-table-column nv-figure nv-cell">{{metrics.failure}}</div>
+	<div class="col-md-1 nv-table-column nv-figure nv-figure-percent nv-cell success-percent">
+		<div class="progress progress-mini">
+			<div style="width: {{metrics.perc_success}}%" class="progress-bar progress-bar-success"></div>
+		</div>
+		{{metrics.perc_success}}%
+	</div>
+	<div class="col-md-1 nv-table-column nv-figure nv-figure-percent nv-cell pending-percent">
+		<div class="progress progress-mini">
+			<div style="width: {{metrics.perc_inprogress}}%" class="progress-bar progress-bar-warning"></div>
+		</div>
+		{{metrics.perc_inprogress}}%
+	</div>
+	<div class="col-md-1 nv-table-column nv-figure nv-figure-percent nv-cell failure-percent">
+		<div class="progress progress-mini">
+			<div style="width: {{metrics.perc_failure}}%" class="progress-bar progress-bar-danger"></div>
+		</div>
+		{{metrics.perc_failure}}%		
+	</div>
+</div>
